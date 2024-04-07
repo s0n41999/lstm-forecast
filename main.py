@@ -9,8 +9,7 @@ from keras.layers import Dense, LSTM
 from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
-import appdirs as ad
-ad.user_cache_dir = lambda *args: "/tmp"
+
 
 st.title('Exchange Rate Prediction')
 
