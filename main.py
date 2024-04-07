@@ -4,8 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from yahoo_fin.stock_info import get_data
 from keras.models import load_model
-from keras.models import Sequential
-from keras.layers import Dense, LSTM
 from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
