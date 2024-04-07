@@ -89,7 +89,7 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 def load_model():
     model=tf.keras.models.load_model('keras_model.keras')
     return model
-
+model = load_model()
 # Train 
 model.fit(x_train, y_train, batch_size=64, epochs=100) 
 
