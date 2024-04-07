@@ -88,7 +88,7 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 #model=pickle.load(open('model.pkl','rb'))
 def load_model():
     modell=tf.keras.models.load_model('kera_model.h5')
-    return model
+    return modell
 
 model = load_model()
 
