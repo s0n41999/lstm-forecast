@@ -9,6 +9,7 @@ from keras.layers import Dense, LSTM
 from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
+import tensorflow as tf
 
 
 st.title('Exchange Rate Prediction')
@@ -85,7 +86,7 @@ for i in range(26, len(train_data)):
 x_train, y_train = np.array(x_train), np.array(y_train)
 
 #load model
-model = load_model('keras_model.keras')
+model = tf.keras.models.load_model('keras_model.keras')
 
 #making prediction
 test_data = scaled_data[training_data_len - 26: , :] 
