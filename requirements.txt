@@ -6,3 +6,4 @@ scikit_learn
 streamlit
 yahoo_fin
 tensorflow
+keras.model
