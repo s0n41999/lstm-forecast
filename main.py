@@ -7,7 +7,7 @@ from keras.models import load_model
 from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
-
+import tenserflow as tf
 
 
 st.title('Exchange Rate Prediction')
@@ -84,9 +84,11 @@ for i in range(26, len(train_data)):
 x_train, y_train = np.array(x_train), np.array(y_train)
 
 #load model
-model = load_model('keras_model.keras')
+#model = load_model('keras_model.keras')
 #model=pickle.load(open('model.pkl','rb'))
-
+def load_model():
+    model=tf.keras.models.load_model('keras_model.keras')
+    return model
 
 # Train 
 model.fit(x_train, y_train, batch_size=64, epochs=100) 
