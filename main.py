@@ -9,6 +9,7 @@ from keras.layers import Dense, LSTM
 from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
+import tensorflow as tf
 
 
 
