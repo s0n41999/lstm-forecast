@@ -91,7 +91,7 @@ def load_model():
     return model
 
 # Train 
-global model
+model=tf.keras.models.load_model('keras_model.keras')
 model.fit(x_train, y_train, batch_size=64, epochs=100) 
 
 #making prediction
