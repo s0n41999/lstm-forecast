@@ -10,7 +10,8 @@ from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 import pickle
-
+from keras.models import Sequential
+from keras.layers import Dense, LSTM
 
 
 st.title('Exchange Rate Prediction')
@@ -88,7 +89,20 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 
 #load model
 #model = load_model('keras_model.keras')
-model=pickle.load(open('model.pkl','rb'))
+#model=pickle.load(open('model.pkl','rb'))
+from keras.models import Sequential
+from keras.layers import Dense, LSTM
+
+model = Sequential()
+
+model.add(LSTM(64))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(units=1)) 
+model.compile(optimizer='adam', loss='mean_squared_error')  
+
+# Train 
+model.fit(x_train, y_train, batch_size=64, epochs=100) 
 
 #making prediction
 test_data = scaled_data[training_data_len - 26: , :] 
