@@ -87,10 +87,10 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 #model = load_model('keras_model.keras')
 #model=pickle.load(open('model.pkl','rb'))
 def load_model():
-    modell=tf.keras.models.load_model('keras_model.keras')
-    return modell
+    model=tf.keras.models.load_model('keras_model.keras')
+    return model
     
-model = load_model()
+
 
 # Train 
 model.fit(x_train, y_train, batch_size=64, epochs=100) 
