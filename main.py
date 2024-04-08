@@ -93,7 +93,7 @@ def load_model():
 
 
 # Train 
-model.fit(x_train, y_train, batch_size=64, epochs=100) 
+#model.fit(x_train, y_train, batch_size=64, epochs=100) 
 
 #making prediction
 test_data = scaled_data[training_data_len - 26: , :] 
