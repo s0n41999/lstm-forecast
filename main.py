@@ -8,7 +8,7 @@ from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 import tensorflow as tf
-from tensorflow.python import keras
+
 
 
 st.title('Exchange Rate Prediction')
@@ -91,8 +91,8 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 #    model=tf.keras.models.load_model('keras_model.keras')
 #   return model
 
-#model = load_model('keras_model.keras')
-model = keras.saving.load_model("keras_model.keras")
+model = load_model('keras_model.keras')
+#model = keras.saving.load_model("keras_model.keras")
 
 
 # Train 
