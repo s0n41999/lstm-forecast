@@ -2,7 +2,7 @@ keras
 matplotlib
 numpy
 pandas
-scikit_learn
+scikit-learn
 streamlit
 yahoo_fin
 tensorflow
