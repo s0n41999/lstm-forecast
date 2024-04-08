@@ -8,6 +8,7 @@ from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 import tensorflow as tf
+from tensorflow.python import keras
 
 
 st.title('Exchange Rate Prediction')
