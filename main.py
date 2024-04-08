@@ -7,8 +7,7 @@ from keras.models import load_model
 from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
-from keras.models import Sequential
-from keras.layers import Dense, LSTM
+
 
 
 
@@ -93,19 +92,8 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 #    model=tf.keras.models.load_model('keras_model.keras')
 #   return model
 
-#model = load_model('keras_model.keras')
+model = load_model('keras_model.keras')
 #model = keras.saving.load_model("keras_model.keras")
-
-model = Sequential()
-
-model.add(LSTM(64))
-model.add(Dense(32, activation='relu'))
-model.add(Dense(32, activation='relu'))
-model.add(Dense(units=1)) 
-model.compile(optimizer='adam', loss='mean_squared_error')  
-
-# Train 
-model.fit(x_train, y_train, batch_size=64, epochs=20)
 
 # Train 
 #model.fit(x_train, y_train, batch_size=64, epochs=100) 
