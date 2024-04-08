@@ -84,12 +84,13 @@ for i in range(26, len(train_data)):
 x_train, y_train = np.array(x_train), np.array(y_train)
 
 #load model
-#model = load_model('keras_model.keras')
+
 #model=pickle.load(open('model.pkl','rb'))
 def load_model():
     model=tf.keras.models.load_model('keras_model.keras')
     return model
     
+model = load_model()  
 
 
 # Train 
