@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import keras
 from yahoo_fin.stock_info import get_data
 from keras.models import load_model
 from datetime import date
@@ -88,7 +87,7 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 #model = load_model('keras_model.keras')
 #model=pickle.load(open('model.pkl','rb'))
 def load_model():
-    model= load_model('keras_model.keras')
+     model=tf.keras.models.load_model('keras_model.keras')
     return model
     
 
