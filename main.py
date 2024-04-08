@@ -7,7 +7,7 @@ from keras.models import load_model
 from datetime import date
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
-import tensorflow as tf
+
 
 
 
